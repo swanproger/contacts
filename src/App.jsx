@@ -21,6 +21,8 @@ const handleChange = (event) => {
     ...prevFormData,
     [name]: value,
 }));
+
+
 }
 const sendUser = (e) => {
 e.preventDefault()
@@ -37,14 +39,15 @@ const onChangesearchUser = (event) => {
           <input value={data.name} onChange={handleChange} className="add name" type="text" placeholder="Введите имя" name="name"></input>
           <input value={data.surname} onChange={handleChange} className="add surname" type="text" placeholder="Введите фамилию" name="surname"></input>
           <input value={data.phonenumber} onChange={handleChange} className="add phonenumber" type="tel" placeholder="Введите номер телефона" name="phonenumber"></input>
-          <button type="submit" onClick={sendUser}>Добавить контакт</button>
+          <button type="submit" onClick={sendUser} >Добавить контакт</button>
         </div>
         <div className="App__users">
-        <Users users={user} searchUser={searchUser} onChangesearchUser={onChangesearchUser}></Users>
+        <Users users={user} searchUser={searchUser} onChangesearchUser={onChangesearchUser} ></Users>
         </div>
 
       </div>
     </div>
+    
   );
 }
 
